@@ -7,12 +7,12 @@
     <body>
         <h1>Sobre Neymar Junior </h1>
 
-        <p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. 
-        Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+        </p>A TRAIÇÃO DE NEYMAR 
+        
+        <p><em>Nossa missão é: <strong>"Volta para o barça ney "</strong>.</em></p>
 
-        <p><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
-
-        <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. 
-        O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+        <p>Neymar vem tendo um péssimo desempenho em seus últimos jogos<p>
+        
+        <p>Será que NJ irá se aposentar cedo.</p>
     </body>
 </html>
