@@ -1,19 +1,19 @@
 body {
-  background-color: #FF0000;
+     background-color: #FF0000;
 }
 
 h1  {
-      texte-align: center 
+     texte-align: center
 }
 
 p {
-    text-align: center;
+     text-align: center;
 }
 
 #NJ {
-  font-size: 20px
+    font-size: 20px
 }
 
 strong {
-     color: #FF0000;
+    color: #FF0000;
 }
