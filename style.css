@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Altura da viewport */
+    min-height: 100vh; /* Altura mínima da viewport */
 }
 
 .container {
@@ -16,31 +16,32 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center; /* Centraliza o texto */
+    display: flex; /* Container agora é flexível */
+    flex-wrap: wrap; /* Permite que os livros quebrem linha quando necessário */
+    justify-content: center; /* Centraliza os livros horizontalmente */
 }
 
 h1 {
     color: #333;
     margin-bottom: 20px;
+    width: 100%; /* Garante que o título ocupa toda a largura do container */
 }
 
 .book {
-    margin-bottom: 20px;
+    margin: 10px; /* Margem entre os livros */
     padding: 10px;
     background-color: #f9f9f9;
     border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: inline-block;
-    width: 45%; /* Largura do livro */
-    vertical-align: top; /* Alinha os livros no topo */
+    width: 200px; /* Largura fixa para cada livro */
+    text-align: center; /* Centraliza o conteúdo */
 }
 
 .book img {
     width: 100%;
-    max-width: 200px;
     height: auto;
-    display: block;
-    margin: 0 auto;
     border-radius: 4px;
+    margin-bottom: 10px; /* Espaço abaixo da imagem */
 }
 
 .book h2 {
