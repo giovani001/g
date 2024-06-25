@@ -11,72 +11,90 @@
     <script src="script.js" defer></script>
 
     <style>
+        /* Estilo do corpo */
+        body {
+            background-color: #121212; /* Preto escuro para o fundo */
+            color: #ffffff; /* Cor do texto principal */
+        }
+
         /* Estilo personalizado para o título centralizado */
         .title-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100px; /* Ajuste conforme necessário */
-            margin-top: 80px; /* Ajuste o espaçamento superior conforme desejado */
-            margin-bottom: 20px; /* Espaçamento inferior */
-            background-color: #343a40; /* Cor de fundo */
-            color: #ffffff; /* Cor do texto */
+            height: 100px;
+            margin-top: 80px;
+            margin-bottom: 20px;
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        /* Estilo para o título E-books */
+        h1 {
+            font-size: 2.5rem; /* Tamanho da fonte aumentado para destaque */
+            letter-spacing: 2px; /* Espaçamento entre as letras */
+            font-family: 'Arial', sans-serif; /* Fonte alternativa */
         }
 
         /* Estilo para os livros */
         .book {
-            background-color: #f8f9fa; /* Cor de fundo dos cards */
-            border: 1px solid #dee2e6; /* Cor da borda */
+            background-color: #1a1a1a; /* Cor de fundo dos cards */
+            border: 1px solid #555; /* Cor da borda */
             padding: 20px;
             text-align: center;
             transition: transform 0.3s ease;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .book:hover {
-            transform: translateY(-10px); /* Efeito de levantar ao passar o mouse */
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
 
         /* Estilo para o preço */
         .price {
             font-size: 20px;
             font-weight: bold;
-            color: #007bff; /* Cor do preço */
+            color: #007bff;
         }
 
         /* Estilo para a barra de navegação */
         .navbar {
-            background-color: #343a40; /* Cor de fundo da navbar */
-            margin-bottom: 20px; /* Espaçamento inferior para evitar sobreposição */
+            background-color: #343a40;
+            margin-bottom: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #555;
         }
 
         .navbar-brand {
-            color: #ffffff !important; /* Cor do texto da navbar */
             font-size: 1.5rem;
         }
 
         .navbar-toggler-icon {
-            background-color: #ffffff; /* Cor do ícone do toggler */
+            background-color: #ffffff;
         }
 
         .navbar-collapse {
-            justify-content: flex-end; /* Alinhar itens à direita */
+            justify-content: flex-end;
         }
 
         /* Estilo para o botão de pesquisa */
         #confirmarBtn {
-            background-color: #007bff; /* Cor de fundo do botão */
-            color: #ffffff; /* Cor do texto do botão */
+            background-color: #007bff;
+            color: #ffffff;
             border: none;
             transition: background-color 0.3s ease;
         }
 
         #confirmarBtn:hover {
-            background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+            background-color: #0056b3;
         }
 
         /* Estilo para os títulos dos livros */
         h2 {
-            color: #343a40; /* Cor do título dos livros */
+            color: #ffffff; /* Cor do título dos livros */
             font-size: 1.2rem;
             margin-top: 15px;
         }
@@ -86,11 +104,6 @@
             max-width: 100%;
             height: auto;
             border-bottom: 1px solid #dee2e6;
-        }
-
-        /* Estilo para o texto dentro dos cards */
-        .book p {
-            margin-bottom: 10px;
         }
 
         /* Responsividade para telas menores */
@@ -114,7 +127,7 @@
     <div class="container-fluid">
       <a class="navbar-brand text-white" href="#">
         <img class="rounded-circle"
-          src="https://static.vecteezy.com/ti/vetor-gratis/p3/20067674-kns-abstrato-tecnologia-circulo-configuracao-logotipo-projeto-em-preto-fundo-kns-criativo-iniciais-carta-logotipo-vetor.jpg"
+          src="https://th.bing.com/th/id/OIP.yT3njT_jQ_35bWq3d6NMQgAAAA?rs=1&pid=ImgDetMain"
           width="50px" height="50px" alt="Logo">
         Biblioteca Virtual
       </a>
@@ -135,11 +148,11 @@
   </nav>
 </header>
 
-<main class="container-fluid">
+<main class="container">
   
   <!-- Container para o título -->
   <div class="title-container">
-    <h1 class="text-center">E-books</h1>
+    <h1 class="text-center">𝙱𝚒𝚋𝚕𝚒𝚘𝚃𝚎𝚌𝚑📚</h1>
   </div>
 
   <!-- Primeira Seção de Livros -->
@@ -191,7 +204,7 @@
     <!-- Livro 6 -->
     <div class="col mb-4">
       <div class="book">
-        <img src="https://img.travessa.com.br/livro/BA/70/703f2112-d832-4ae3-994f-d7ae2504c860.jpg" alt="Livro 6">
+        <img src="https://img.travessa.com.br/livro/BA/70/703f2112-d832-4ae3-994f-d7ae2504c860.jpg" alt="A FANTÁSTICA FÁBRICA DE CHOCOLATE">
         <h2>A FANTÁSTICA FÁBRICA DE CHOCOLATE</h2>
         <p class="price">R$ 29,99</p>
       </div>
@@ -200,7 +213,7 @@
     <!-- Livro 7 -->
     <div class="col mb-4">
       <div class="book">
-        <img src="https://th.bing.com/th/id/OIP.DLJr4RcHSH78oOUFHrDrLQHaJh?rs=1&pid=ImgDetMain" alt="Livro 7">
+        <img src="https://th.bing.com/th/id/OIP.DLJr4RcHSH78oOUFHrDrLQHaJh?rs=1&pid=ImgDetMain" alt="Á ESPERA DE UM MILAGRE LIVRO">
         <h2>Á ESPERA DE UM MILAGRE LIVRO</h2>
         <p class="price">R$ 19,99</p>
       </div>
@@ -209,7 +222,7 @@
     <!-- Livro 8 -->
     <div class="col mb-4">
       <div class="book">
-        <img src="https://4.bp.blogspot.com/-8B1HSro0VSg/WtlOslLS6hI/AAAAAAAAG8Q/Z64oLAlX5O88DRLUWwvzdGPLQo5xQn7jACLcBGAs/s1600/A-Cabana.jpg" alt="Livro 8">
+        <img src="https://th.bing.com/th/id/R.bcefeb5d4d60da0a83d5171a1d994d99?rik=GQeOW7VeLUE8bQ&pid=ImgRaw&r=0" alt="A CABANA">
         <h2>A CABANA</h2>
         <p class="price">R$ 39,99</p>
       </div>
