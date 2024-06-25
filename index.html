@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+
     <style>
         /* Estilo personalizado para o título centralizado */
         .title-container {
@@ -21,84 +22,162 @@
             background-color: #343a40; /* Cor de fundo */
             color: #ffffff; /* Cor do texto */
         }
+
         /* Estilo para os livros */
         .book {
             background-color: #f8f9fa; /* Cor de fundo dos cards */
             border: 1px solid #dee2e6; /* Cor da borda */
-            padding: 15px;
+            padding: 20px;
             text-align: center;
+            transition: transform 0.3s ease;
         }
+
+        .book:hover {
+            transform: translateY(-10px); /* Efeito de levantar ao passar o mouse */
+        }
+
         /* Estilo para o preço */
         .price {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
             color: #007bff; /* Cor do preço */
         }
+
         /* Estilo para a barra de navegação */
         .navbar {
             background-color: #343a40; /* Cor de fundo da navbar */
             margin-bottom: 20px; /* Espaçamento inferior para evitar sobreposição */
         }
+
         .navbar-brand {
             color: #ffffff !important; /* Cor do texto da navbar */
+            font-size: 1.5rem;
         }
+
         .navbar-toggler-icon {
             background-color: #ffffff; /* Cor do ícone do toggler */
         }
+
         .navbar-collapse {
             justify-content: flex-end; /* Alinhar itens à direita */
         }
+
         /* Estilo para o botão de pesquisa */
         #confirmarBtn {
             background-color: #007bff; /* Cor de fundo do botão */
             color: #ffffff; /* Cor do texto do botão */
+            border: none;
+            transition: background-color 0.3s ease;
         }
+
+        #confirmarBtn:hover {
+            background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+        }
+
         /* Estilo para os títulos dos livros */
         h2 {
             color: #343a40; /* Cor do título dos livros */
+            font-size: 1.2rem;
+            margin-top: 15px;
         }
 
-        /* Estilo específico para ajustar o tamanho da imagem do primeiro livro */
-        .book img:first-of-type {
-            width: 200px; /* Definindo largura igual ao segundo livro */
+        /* Ajuste para as imagens dos livros */
+        .book img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        /* Estilo para o texto dentro dos cards */
+        .book p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .book {
+                padding: 15px;
+            }
+            .price {
+                font-size: 18px;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
-@@ -104,8 +109,8 @@ <h1 class="text-center">E-books</h1>
-  <!-- Segunda Seção de Livros -->
-  <section class="row row-cols-1 row-cols-md-4 g-5 p-3 m-2 gap-3 justify-content-center">
-    <div class="book">
-      <img src="livro1.jpg" alt="E-Booker">
-      <h2>E-Booker</h2>
-      <img src="https://th.bing.com/th/id/OIP.38GExLfFDy58qnhHfIFFewHaLH?rs=1&pid=ImgDetMain" alt="O Menino do Pijama Listrado">
-      <h2>O Menino do Pijama Listrado</h2>
-      <p class="price">R$ 29,99</p>
+
+<header>
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">
+        <img class="rounded-circle"
+          src="https://static.vecteezy.com/ti/vetor-gratis/p3/20067674-kns-abstrato-tecnologia-circulo-configuracao-logotipo-projeto-em-preto-fundo-kns-criativo-iniciais-carta-logotipo-vetor.jpg"
+          width="50px" height="50px" alt="Logo">
+        Biblioteca Virtual
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <form class="d-flex ms-auto" role="search">
+          <input class="form-control me-2" id="barraDePesquisa" type="search" placeholder="Pesquisar livros"
+            aria-label="Search" required>
+          <button class="btn btn-outline-light" type="button" id="confirmarBtn">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="container-fluid">
+  
+  <!-- Container para o título -->
+  <div class="title-container">
+    <h1 class="text-center">E-books</h1>
+  </div>
+
+  <!-- Primeira Seção de Livros -->
+  <section class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+    <div class="col mb-4">
+      <div class="book">
+        <img src="https://th.bing.com/th/id/OIP.38GExLfFDy58qnhHfIFFewHaLH?rs=1&pid=ImgDetMain" alt="O Menino do Pijama Listrado">
+        <h2>O Menino do Pijama Listrado</h2>
+        <p class="price">R$ 29,99</p>
+      </div>
     </div>
 
-    <div class="book">
-      <img src="https://th.bing.com/th/id/R.3c202bf0a5c3eb18efc907c87e32a116?rik=jnRr0mWQ54JdbA&pid=ImgRaw&r=0" alt="Livro 2" style="width: 200px;">
-      <h2>Python para Iniciantes</h2>
-      <p class="price">R$ 19,99</p>
+    <div class="col mb-4">
+      <div class="book">
+        <img src="https://th.bing.com/th/id/R.3c202bf0a5c3eb18efc907c87e32a116?rik=jnRr0mWQ54JdbA&pid=ImgRaw&r=0" alt="48 Leis do Poder">
+        <h2>48 Leis do Poder</h2>
+        <p class="price">R$ 19,99</p>
+      </div>
+    </div>
+
+    <div class="col mb-4">
+      <div class="book">
+        <img src="https://interactive.wttw.com/sites/default/files/the-chronicles-of-narnia@2x.jpg" alt="As Crônicas de Nárnia">
+        <h2>As Crônicas de Nárnia</h2>
+        <p class="price">R$ 39,99</p>
+      </div>
+    </div>
+
+    <div class="col mb-4">
+      <div class="book">
+        <img src="https://th.bing.com/th/id/OIP.VxUzGe24OrxCbj80SGSBGgHaLB?rs=1&pid=ImgDetMain" alt="A Arte da Guerra">
+        <h2>A Arte da Guerra</h2>
+        <p class="price">R$ 25,99</p>
+      </div>
     </div>
     
-    <!-- Adicione mais livros conforme necessário nesta seção -->
-  </section>
-  <!-- Terceira Seção de Livros -->
-  <section class="row row-cols-1 row-cols-md-4 g-5 p-3 m-2 gap-3 justify-content-center">
-    <div class="book">
-      <img src="livro3.jpg" alt="Livro 3">
-      <h2>JavaScript Avançado</h2>
-      <p class="price">R$ 34,99</p>
-    </div>
-    <div class="book">
-      <img src="livro4.jpg" alt="Livro 4">
-      <h2>HTML e CSS: Fundamentos</h2>
-      <p class="price">R$ 24,99</p>
-    </div>
-    
-    <!-- Adicione mais livros conforme necessário nesta seção -->
-  </section>
-</main>
-</body>
-</html>
+    <!-- Adicione mais livros conforme necessário -->
+    <div class="col mb-4">
+      <div class="book">
+        <img src="livro5.jpg" alt="Livro 5">
+       
