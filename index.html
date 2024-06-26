@@ -34,6 +34,15 @@
             font-size: 2.5rem; /* Tamanho da fonte aumentado para destaque */
             letter-spacing: 2px; /* Espaçamento entre as letras */
             font-family: 'Arial', sans-serif; /* Fonte alternativa */
+            display: flex;
+            align-items: center; /* Alinhar imagem e texto verticalmente */
+        }
+
+        /* Estilo para a imagem do título */
+        .title-icon {
+            width: 50px; /* Tamanho da imagem */
+            height: auto;
+            margin-right: 10px; /* Espaçamento entre imagem e texto */
         }
 
         /* Estilo para os livros */
@@ -45,6 +54,7 @@
             transition: transform 0.3s ease;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative; /* Para posicionamento relativo do conteúdo */
         }
 
         .book:hover {
@@ -104,6 +114,7 @@
             max-width: 100%;
             height: auto;
             border-bottom: 1px solid #dee2e6;
+            margin-bottom: 10px; /* Espaço entre a imagem e o título */
         }
 
         /* Responsividade para telas menores */
@@ -127,9 +138,9 @@
     <div class="container-fluid">
       <a class="navbar-brand text-white" href="#">
         <img class="rounded-circle"
-          src="https://th.bing.com/th/id/OIP.yT3njT_jQ_35bWq3d6NMQgAAAA?rs=1&pid=ImgDetMain"
+          src="https://static3.bigstockphoto.com/4/5/2/large1500/254911732.jpg"
           width="50px" height="50px" alt="Logo">
-        Biblioteca Virtual
+        Ｂｉｂｌｉｏｔｅｃａ ｖｉｒｔｕａｌ
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
@@ -152,7 +163,10 @@
   
   <!-- Container para o título -->
   <div class="title-container">
-    <h1 class="text-center">𝙱𝚒𝚋𝚕𝚒𝚘𝚃𝚎𝚌𝚑📚</h1>
+    <h1 class="text-center">
+      <img class="title-icon" src="https://th.bing.com/th/id/OIP.yT3njT_jQ_35bWq3d6NMQgAAAA?rs=1&pid=ImgDetMain" alt="Ícone de livro">
+      𝙱𝚒𝚋𝚕𝚒𝚘𝚃𝚎𝚌𝚑
+    </h1>
   </div>
 
   <!-- Primeira Seção de Livros -->
@@ -231,8 +245,8 @@
     <!-- Livro 9 -->
     <div class="col mb-4">
       <div class="book">
-        <img src="livro9.jpg" alt="Livro 9">
-        <h2>Livro 9</h2>
+        <img src="https://th.bing.com/th/id/R.b922a96d3b987ac3363ca00780add879?rik=6DbMdMimHc7e7Q&pid=ImgRaw&r=0" alt="Livro 9">
+        <h2>Harry potter e a câmara dos segredos</h2>
         <p class="price">R$ 25,99</p>
       </div>
     </div>
