@@ -15,6 +15,41 @@
         body {
             background-color: #121212; /* Preto escuro para o fundo */
             color: #ffffff; /* Cor do texto principal */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo do contêiner do celular */
+        .mobile-frame {
+            max-width: 400px; /* Largura máxima do "celular" */
+            margin: 20px auto; /* Centralizar o contêiner */
+            padding: 20px;
+            background: #000;
+            border-radius: 36px; /* Arredondamento das bordas */
+            box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Sombra para o efeito 3D */
+            position: relative;
+        }
+
+        /* Estilo para simular a tela do celular */
+        .mobile-frame::before {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 6px;
+            background: #333;
+            border-radius: 3px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Estilo para o corpo principal do site dentro do "celular" */
+        .mobile-content {
+            background-color: #121212; /* Preto escuro para o fundo */
+            color: #ffffff; /* Cor do texto principal */
+            border-radius: 20px;
+            overflow: hidden;
         }
 
         /* Estilo personalizado para o título centralizado */
@@ -159,129 +194,129 @@
   </nav>
 </header>
 
-<main class="container">
-  
-  <!-- Container para o título -->
-  <div class="title-container">
-    <h1 class="text-center">
-      <img class="title-icon" src="https://th.bing.com/th/id/OIP.yT3njT_jQ_35bWq3d6NMQgAAAA?rs=1&pid=ImgDetMain" alt="Ícone de livro">
-      𝙱𝚒𝚋𝚕𝚒𝚘𝚃𝚎𝚌𝚑
-    </h1>
+<main class="mobile-frame">
+  <div class="mobile-content">
+    <!-- Container para o título -->
+    <div class="title-container">
+      <h1 class="text-center">
+        <img class="title-icon" src="https://th.bing.com/th/id/OIP.yT3njT_jQ_35bWq3d6NMQgAAAA?rs=1&pid=ImgDetMain" alt="Ícone de livro">
+        𝙱𝚒𝚋𝚕𝚒𝚘𝚃𝚎𝚌𝚑
+      </h1>
+    </div>
+
+    <!-- Seção de Livros -->
+    <section class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
+      <!-- Livro 1 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://th.bing.com/th/id/OIP.38GExLfFDy58qnhHfIFFewHaLH?rs=1&pid=ImgDetMain" alt="O Menino do Pijama Listrado">
+                    <h2>O Menino do Pijama Listrado</h2>
+          <p class="price">R$ 29,99</p>
+        </div>
+      </div>
+
+      <!-- Livro 2 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://th.bing.com/th/id/R.3c202bf0a5c3eb18efc907c87e32a116?rik=jnRr0mWQ54JdbA&pid=ImgRaw&r=0" alt="48 Leis do Poder">
+          <h2>48 Leis do Poder</h2>
+          <p class="price">R$ 19,99</p>
+        </div>
+      </div>
+
+      <!-- Livro 3 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://interactive.wttw.com/sites/default/files/the-chronicles-of-narnia@2x.jpg" alt="As Crônicas de Nárnia">
+          <h2>As Crônicas de Nárnia</h2>
+          <p class="price">R$ 39,99</p>
+        </div>
+      </div>
+
+      <!-- Livro 4 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://th.bing.com/th/id/OIP.VxUzGe24OrxCbj80SGSBGgHaLB?rs=1&pid=ImgDetMain" alt="A Arte da Guerra">
+          <h2>A Arte da Guerra</h2>
+          <p class="price">R$ 25,99</p>
+        </div>
+      </div>
+
+      <!-- Livro 5 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://th.bing.com/th/id/OIP.YhyRPil6dOCvnIGpQIzFYgHaKp?rs=1&pid=ImgDetMain" alt="O Código Da Vinci">
+          <h2>O Código Da Vinci</h2>
+          <p class="price">R$ 21,90</p>
+        </div>
+      </div>
+
+      <!-- Livro 6 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://img.travessa.com.br/livro/BA/70/703f2112-d832-4ae3-994f-d7ae2504c860.jpg" alt="A Fantástica Fábrica de Chocolate">
+          <h2>A Fantástica Fábrica de Chocolate</h2>
+          <p class="price">R$ 29,99</p>
+        </div>
+      </div>
+
+      <!-- Livro 7 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://th.bing.com/th/id/OIP.DLJr4RcHSH78oOUFHrDrLQHaJh?rs=1&pid=ImgDetMain" alt="Á Espera de um Milagre">
+          <h2>Á Espera de um Milagre</h2>
+          <p class="price">R$ 19,99</p>
+        </div>
+      </div>
+
+      <!-- Livro 8 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://th.bing.com/th/id/R.bcefeb5d4d60da0a83d5171a1d994d99?rik=GQeOW7VeLUE8bQ&pid=ImgRaw&r=0" alt="A Cabana">
+          <h2>A Cabana</h2>
+          <p class="price">R$ 39,99</p>
+        </div>
+      </div>
+
+      <!-- Livro 9 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://th.bing.com/th/id/R.b922a96d3b987ac3363ca00780add879?rik=6DbMdMimHc7e7Q&pid=ImgRaw&r=0" alt="Harry Potter e a Câmara dos Segredos">
+          <h2>Harry Potter e a Câmara dos Segredos</h2>
+          <p class="price">R$ 25,99</p>
+        </div>
+      </div>
+
+      <!-- Livro 10 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://faroeditorial.com.br/site2020/wp-content/uploads/2020/11/O-Pequeno-Principe-963x1536.jpg" alt="O Pequeno Príncipe">
+          <h2>O Pequeno Príncipe</h2>
+          <p class="price">R$ 17,50</p>
+        </div>
+      </div>
+
+      <!-- Livro 11 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://cdn.kobo.com/book-images/2de7cf3b-5a70-4e17-9a65-1af6fb5e919d/1200/1200/False/dom-quixote-8.jpg" alt="Dom Quixote">
+          <h2>Dom Quixote</h2>
+          <p class="price">R$ 22,90</p>
+        </div>
+      </div>
+
+      <!-- Livro 12 -->
+      <div class="col mb-4">
+        <div class="book">
+          <img src="https://img.wook.pt/images/harry-potter-e-a-pedra-filosofal-j-k-rowling/MXwyNDA2Njc5OHwyMDEyNDQzMXwxNTkwNTkzNTc5MDAw/500x" alt="Harry Potter e a Pedra Filosofal">
+          <h2>Harry Potter e a Pedra Filosofal</h2>
+          <p class="price">R$ 29,99</p>
+        </div>
+      </div>
+    </section>
   </div>
-
-  <!-- Seção de Livros -->
-  <section class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
-    <!-- Livro 1 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://th.bing.com/th/id/OIP.38GExLfFDy58qnhHfIFFewHaLH?rs=1&pid=ImgDetMain" alt="O Menino do Pijama Listrado">
-        <h2>O Menino do Pijama Listrado</h2>
-        <p class="price">R$ 29,99</p>
-      </div>
-    </div>
-
-    <!-- Livro 2 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://th.bing.com/th/id/R.3c202bf0a5c3eb18efc907c87e32a116?rik=jnRr0mWQ54JdbA&pid=ImgRaw&r=0" alt="48 Leis do Poder">
-        <h2>48 Leis do Poder</h2>
-        <p class="price">R$ 19,99</p>
-      </div>
-    </div>
-
-    <!-- Livro 3 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://interactive.wttw.com/sites/default/files/the-chronicles-of-narnia@2x.jpg" alt="As Crônicas de Nárnia">
-        <h2>As Crônicas de Nárnia</h2>
-        <p class="price">R$ 39,99</p>
-      </div>
-    </div>
-
-    <!-- Livro 4 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://th.bing.com/th/id/OIP.VxUzGe24OrxCbj80SGSBGgHaLB?rs=1&pid=ImgDetMain" alt="A Arte da Guerra">
-        <h2>A Arte da Guerra</h2>
-        <p class="price">R$ 25,99</p>
-      </div>
-    </div>
-
-    <!-- Livro 5 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://th.bing.com/th/id/OIP.YhyRPil6dOCvnIGpQIzFYgHaKp?rs=1&pid=ImgDetMain" alt="O CÓDIGO DA VINCI">
-        <h2>O CÓDIGO DA VINCI</h2>
-        <p class="price">R$ 21,90</p>
-      </div>
-    </div>
-
-    <!-- Livro 6 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://img.travessa.com.br/livro/BA/70/703f2112-d832-4ae3-994f-d7ae2504c860.jpg" alt="A FANTÁSTICA FÁBRICA DE CHOCOLATE">
-        <h2>A FANTÁSTICA FÁBRICA DE CHOCOLATE</h2>
-        <p class="price">R$ 29,99</p>
-      </div>
-    </div>
-
-    <!-- Livro 7 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://th.bing.com/th/id/OIP.DLJr4RcHSH78oOUFHrDrLQHaJh?rs=1&pid=ImgDetMain" alt="Á ESPERA DE UM MILAGRE LIVRO">
-        <h2>Á ESPERA DE UM MILAGRE LIVRO</h2>
-        <p class="price">R$ 19,99</p>
-      </div>
-    </div>
-
-    <!-- Livro 8 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://th.bing.com/th/id/R.bcefeb5d4d60da0a83d5171a1d994d99?rik=GQeOW7VeLUE8bQ&pid=ImgRaw&r=0" alt="A CABANA">
-        <h2>A CABANA</h2>
-        <p class="price">R$ 39,99</p>
-      </div>
-    </div>
-
-    <!-- Livro 9 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://th.bing.com/th/id/R.b922a96d3b987ac3363ca00780add879?rik=6DbMdMimHc7e7Q&pid=ImgRaw&r=0" alt="Harry Potter e a Câmara dos Segredos">
-        <h2>Harry Potter e a Câmara dos Segredos</h2>
-        <p class="price">R$ 25,99</p>
-      </div>
-    </div>
-
-    <!-- Livro 10 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://faroeditorial.com.br/site2020/wp-content/uploads/2020/11/O-Pequeno-Principe-963x1536.jpg" alt="O Pequeno Príncipe">
-        <h2>O Pequeno Príncipe</h2>
-        <p class="price">R$ 17,50</p>
-      </div>
-    </div>
-
-    <!-- Livro 11 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://cdn.kobo.com/book-images/2de7cf3b-5a70-4e17-9a65-1af6fb5e919d/1200/1200/False/dom-quixote-8.jpg" alt="Dom Quixote">
-        <h2>Dom Quixote</h2>
-        <p class="price">R$ 22,90</p>
-      </div>
-    </div>
-
-    <!-- Novo Livro 12 -->
-    <div class="col mb-4">
-      <div class="book">
-        <img src="https://img.wook.pt/images/harry-potter-e-a-pedra-filosofal-j-k-rowling/MXwyNDA2Njc5OHwyMDEyNDQzMXwxNTkwNTkzNTc5MDAw/500x" alt="Novo Livro">
-        <h2>Harry potter e a pedra filosofal</h2>
-        <p class="price">R$ 29,99</p>
-      </div>
-    </div>
-
-  </section>
-
 </main>
 
 </body>
 </html>
+
